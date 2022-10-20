@@ -7,5 +7,6 @@ from . import views
 
 urlpatterns = [
     path('', views.home),
-    path('get/<int:id>/', views.getlist, name='get')
+    path('get/<int:id>/', views.getlist, name='get'),
+    path('update',views.updatelist, name='update')
 ]

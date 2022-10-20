@@ -2,6 +2,10 @@
 from msilib import PID_KEYWORDS
 from multiprocessing import context
 from django.shortcuts import render
+
+from blog.forms import BlogForm
+
+
 from .models import Blog
 
 # Create your views here.
@@ -26,3 +30,11 @@ def getlist(request,id):
         'getkey':getid
     }
     return render(request,'get.html',context)
+
+# end of retrieving id 
+
+# code for updating the list 
+
+def updatelist(request):
+    if request.method == 'POST':
+        form = BlogForm(instance=post)
