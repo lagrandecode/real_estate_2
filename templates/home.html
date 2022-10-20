@@ -10,11 +10,13 @@
   
 </head>
 <body>
-    {% for x in list %}
+    <div class="container">
+        {% for x in list %}
 
-<!-- <h2>{{x.title}}</h2> -->
-<a href="{% url 'get' x.id %}"><h2>{{x.title}}</h2></a>
-
-{% endfor %}
+        <!-- <h2>{{x.title}}</h2> -->
+        <a href="{% url 'get' x.id %}"><h2>{{x.title}}</h2></a>
+        
+        {% endfor %}
+    </div>
 </body>
 </html>
