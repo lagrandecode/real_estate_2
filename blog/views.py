@@ -43,3 +43,8 @@ def updatelist(request,id):
         if updateform.is_valid():
             updateform.save()
         return render(request,'update.html',context)
+
+def deletelist(request):
+    deleteitem = Blog.objects.get(id=id)
+    deleteitem.delete()
+    return render(request,'delete.html',context)
