@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Estate</title>
-    <link rel="stylesheet" href="{% static 'static\main.css' %}">
+    <link rel="stylesheet" href="{% static 'main.css' %}">
   
 </head>
 <body>
@@ -17,6 +17,10 @@
         <a href="{% url 'get' x.id %}"><h2>{{x.title}}</h2></a>
         
         {% endfor %}
+    </div>
+
+    <div class="text">
+        <h2>Hello world</h2>
     </div>
 </body>
 </html>
