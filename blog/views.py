@@ -1,7 +1,7 @@
 
-from msilib import PID_KEYWORDS
+    
 from multiprocessing import context
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
 from blog.forms import BlogForm
 
@@ -47,4 +47,4 @@ def updatelist(request,id):
 def deletelist(request):
     deleteitem = Blog.objects.get(id=id)
     deleteitem.delete()
-    return render(request,'delete.html',context)
+    return redirect('/')
