@@ -35,6 +35,11 @@ def getlist(request,id):
 
 # code for updating the list 
 
-def updatelist(request):
+def updatelist(request,id):
+    update = Blog.objects.get(id=id)
+    updateform = BlogForm(instance=update)
     if request.method == 'POST':
-        form = BlogForm(instance=post)
+        updateform = BlogForm(request.POST, instance=update)
+        if updateform.is_valid():
+            updateform.save()
+        return render(request,'update.html',context)
