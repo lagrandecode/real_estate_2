@@ -44,7 +44,7 @@ def updatelist(request,id):
             updateform.save()
         return render(request,'update.html',context)
 
-def deletelist(request):
+def deletelist(request,id):
     deleteitem = Blog.objects.get(id=id)
-    deleteitem.delete()
+    d
     return redirect('/')
