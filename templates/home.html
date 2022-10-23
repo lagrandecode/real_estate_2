@@ -8,20 +8,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Estate</title>
     <link rel="stylesheet" href="{% static 'static\main.css' %}">
+    <!-- <link rel="stylesheet" href="{% static '' %}"> -->
   
 </head>
 <body>
-    <div class="container">
-        {% for x in list %}
-
-        <!-- <h2>{{x.title}}</h2> -->
-        <a href="{% url 'get' x.id %}"><h2>{{x.title}}</h2></a>
-        
-        {% endfor %}
-    </div>
-
-    <div class="text">
-        <h2>Hello world</h2>
-    </div>
+    <nav class="nav" id="nav">
+        <div class="logo">
+            <a class="log" href="#"><h1><span style="color: blue;font-family: 'Shalimar', cursive;">Property</span><span style="color: red;font-family: 'Shalimar', cursive;">48</span></h1></a>
+        </div>
+        <div class="titlebar">
+            <a href="http://">For Sale</a>
+            <a href="http://">For Rent</a>
+            <a href="http://">Companies</a>
+            <a href="http://">Register</a>
+            <a href="http://">Trend</a> 
+        </div>
+    </nav>
 </body>
 </html>
