@@ -10,7 +10,8 @@ class Blog(models.Model):
     num_bath = models.IntegerField()
     Sqare = models.IntegerField()
     address = models.CharField(max_length=500)
-    image = models.ImageField(null=True)
+    image = models.ImageField(null=True) 
+    posted_time = models.CharField(auto_now_add=True)
     # image
 
     def __str__(self):
